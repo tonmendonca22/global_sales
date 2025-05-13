@@ -1,7 +1,36 @@
--- Total sales and profit by region
-SELECT
-  region,
-  SUM(sales) AS total_sales,
-  SUM(profit) AS total_profit
+--Initial Exploration – Knowing Our Tools
+PRAGMA table_info ("global_sales")
+
+-- 1. What's the Big Picture? The Total Sales Value
+-- The Question: What was the total revenue generated? 
+SELECT SUM ("Total_Sales") AS Total_Sales
+FROM global_sales;
+
+-- 2. Where's the Heart of Sales? Sales by Product Category
+-- The Question: Which product categories drive our sales?
+SELECT "Category", COUNT(*) AS quantidade_vendas
 FROM global_sales
-GROUP BY region;
+GROUP BY "Category"
+ORDER BY quantidade_vendas DESC;
+
+-- 3. How Do Logistics and Urgency Impact Global Sales? Sales by Country and Priority
+-- The Question: How is sales volume distributed geographically, considering delivery urgency?
+SELECT "Country", "Priority", COUNT (*) AS Sales_Quantity
+FROM global_sales
+GROUP BY "Country", "Priority"
+ORDER BY "Country", Sales_Quantity DESC;
+
+-- 4. Is the Discount Strategy Working? Average Discount by Sub-Category
+-- The Question: What's the average discount level we're applying across different product sub-categories?
+SELECT "Sub_Category", ROUND(AVG("Discount") * 100,2) AS Average_discount_precentage
+FROM global_sales
+GROUP BY "Sub_Category"
+ORDER BY Average_discount_precentage DESC;
+
+-- 5. Where Are Our Most Valuable Customers (by Average Value)? Countries with the Highest Average Sales Value
+-- The Question: In which countries is the average value per transaction highest?
+SELECT "Country", ROUND(AVG("Total_Sales"), 2) AS Average_sales_value
+FROM global_sales
+GROUP BY
+ORDER BY Average_sales_value DESC
+LIMIT 10;

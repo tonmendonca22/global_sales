@@ -64,3 +64,6 @@ SELECT
   SUM(profit) AS total_profit
 FROM global_sales
 GROUP BY region;
+
+## 📬 Contact
+If you'd like to collaborate, give feedback, or have questions about the project, feel free to reach out via LinkedIn: https://www.linkedin.com/in/erivelton-mendonca/ or open an issue in this repository.

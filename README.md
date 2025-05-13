@@ -52,7 +52,7 @@ This dashboard brings the global sales data to life through compelling visualiza
 
 ## 🗃️ SQL Queries
 
-All SQL queries used in this project are available in the [`/sql`](./sql-queries) folder. 
+All SQL queries used in this project are available in the [`/SQL`](./sql-queries) folder. 
 
 Each query supports a different stage of the analysis, including data cleaning, aggregation, and insight generation. Example queries:
 

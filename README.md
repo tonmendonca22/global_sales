@@ -64,26 +64,11 @@ SELECT
   SUM(profit) AS total_profit
 FROM global_sales
 GROUP BY region;
+```
+-- 
 
 ---
 
 ## 📬 Contact
 If you'd like to collaborate, give feedback, or have questions about the project, feel free to reach out via ['LinkedIn'](https://www.linkedin.com/in/erivelton-mendonca/) or open an issue in this repository.
----
 
-## 🔗 Power BI Dashboard
-
-Access the interactive dashboard here: [▶️ View Dashboard](https://bit.ly/erivelton-mendonca_global_sales)
-
-This dashboard brings the global sales data to life through compelling visualizations and strategic storytelling. It is designed to help business stakeholders quickly understand performance metrics, identify growth opportunities, and make informed decisions.
-
-### 📌 Highlights:
-- 📍 **Sales by Region** – Analyze revenue and profit distribution by geography
-- 🏆 **Top-Selling Products** – Identify top categories and best-performing items
-- 📈 **Profitability Analysis** – Evaluate financial performance across dimensions
-- 🧠 **Customer Segmentation** – Understand customer behavior and trends
-- 🎯 **Strategic Storytelling** – Visual narratives that connect data to business goals
-
-> 📁 The `.pbix` source file is available in the `/powerbi` folder for further exploration or customization.
-
----

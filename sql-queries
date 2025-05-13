@@ -1,0 +1,7 @@
+-- Total sales and profit by region
+SELECT
+  region,
+  SUM(sales) AS total_sales,
+  SUM(profit) AS total_profit
+FROM global_sales
+GROUP BY region;
